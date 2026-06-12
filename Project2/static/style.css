@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+
+    /* 🌄 Local Flask background image */
+    background: url("/static/images/image.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🌫️ Glass Card */
+.container {
+    width: 380px;
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    text-align: center;
+    color: black;
+}
+
+/* Title */
+h1 {
+    color: black;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+    font-size: 14px;
+}
+
+/* Button */
+button {
+    padding: 10px 18px;
+    margin-top: 8px;
+
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* List */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.18);
+    margin: 6px 0;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+    color: black;
+}
+
+/* Delete button */
+.delete-btn {
+    background: #ff4d4d;
+    color: black;
+
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
