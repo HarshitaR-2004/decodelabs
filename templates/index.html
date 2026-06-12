@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💰 Expense Tracker</h1>
+
+    <!-- Add Expense Form -->
+    <form action="/add" method="POST">
+        <input type="text" name="title" placeholder="Expense Title" required>
+        <input type="number" name="amount" placeholder="Amount" step="0.01" required>
+        <button type="submit">Add Expense</button>
+    </form>
+
+    <!-- Total -->
+    <h2>Total Spent: ₹{{ total }}</h2>
+
+    <!-- Expense List -->
+    <ul>
+        {% for exp in expenses %}
+        <li>
+            {{ exp.title }} - ₹{{ exp.amount }}
+
+            <!-- DELETE FIXED (POST instead of GET) -->
+            <form action="/delete/{{ exp.id }}" method="POST" style="display:inline;">
+                <button type="submit" class="delete-btn">❌</button>
+            </form>
+
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+</body>
+</html>
